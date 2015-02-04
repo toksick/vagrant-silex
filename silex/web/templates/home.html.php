@@ -1,6 +1,6 @@
 <?php
 $view->extend("layout.html.php");
-$view["slots"]->set("title", "Hello");
+$view["slots"]->set("title", "Home");
 ?>
 <div class="row">
 	<div class="col-sm-12">
