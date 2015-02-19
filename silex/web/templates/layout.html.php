@@ -33,8 +33,8 @@ $title = $view["slots"]->get("title", "MyWebsite");
 					<li <?= $title == "Hello" ? "class=\"active\"" : "" ?>><a
 						href="/hello"><span class="glyphicon glyphicon-music"
 							aria-hidden="true"></span> Hello</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-user"
-							aria-hidden="true"></span> Page 2</a></li>
+					<li><a href="/form"><span class="glyphicon glyphicon-user"
+							aria-hidden="true"></span> Form Handling</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-cog"
 							aria-hidden="true"></span> Page 3</a></li>
 				</ul>
