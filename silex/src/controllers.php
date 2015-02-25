@@ -65,10 +65,16 @@ $app->match('/blogpost', function (Request $request) use($app) {
     
     
     $posts = $dbConnection->fetchAll('SELECT * FROM blog_post');
+    if ($request->isMethod("GET")) {
+        return $app['templating']->render('blog.html.php', array('posts' => $posts));
+    }
+    elseif ($request->isMethod("POST")){
+        
+        $dbConnection->delete("SELECT * FROM blo");
+        return $app['templating']->render("blog.html.php", array("posts" => $posts));
+            
+    }
     
-    return $app['templating']->render('blog.html.php', array('posts' => $posts,
-                                                                'id' => 1
-    ));
     
 });
 

@@ -11,6 +11,7 @@ $view["slots"]->set("title", "Blog Post");
                 <h4 class="list-group-item-heading"><?= $value['title']?></h4>
                 <p class="list-group-item-text"><?= $value['text']?></p>
               </a>
+              <button class="btn btn-default" type="submit">Delete</button>
             </div>
         <?php }?>
     </div>
