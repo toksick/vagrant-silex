@@ -35,8 +35,8 @@ $title = $view["slots"]->get("title", "MyWebsite");
 							aria-hidden="true"></span> Hello</a></li>
 					<li><a href="/form"><span class="glyphicon glyphicon-user"
 							aria-hidden="true"></span> Form Handling</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-cog"
-							aria-hidden="true"></span> Page 3</a></li>
+					<li><a href="/blogpost"><span class="glyphicon glyphicon-cog"
+							aria-hidden="true"></span>Blog Post</a></li>
 				</ul>
 			</div>
 		</div>

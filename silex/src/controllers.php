@@ -59,3 +59,57 @@ $app->match('/form', function (Request $request) use($app)
     
     }
 });
+
+$app->match('/blogpost', function (Request $request) use($app) {
+    $dbConnection = $app['db'];
+    
+    
+    $posts = $dbConnection->fetchAll('SELECT * FROM blog_post');
+    
+    return $app['templating']->render('blog.html.php', array('posts' => $posts,
+                                                                'id' => 1
+    ));
+    
+});
+
+$app->match('/blogposts/post/{id}', function ($id) use ($app){
+    $dbConnection = $app['db'];
+    
+    $post = $dbConnection->fetchAssoc("SELECT * FROM blog_post WHERE id = $id", array(1));
+    
+    return $app['templating']->render('overview.html.php', array('post' => $post));
+    
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
