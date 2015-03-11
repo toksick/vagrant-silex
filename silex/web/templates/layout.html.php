@@ -17,7 +17,7 @@ $title = $view["slots"]->get("title", "MyWebsite");
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">WebSiteName</a>
+				<a class="navbar-brand" href="/home">MyFirstWebsite</a>
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar">
 					<span class="sr-only">Toggle navigation</span> <span
@@ -30,20 +30,19 @@ $title = $view["slots"]->get("title", "MyWebsite");
 					<li <?= $title == "Home" ? "class=\"active\"" : "" ?>><a
 						href="/home"><span class="glyphicon glyphicon-home"
 							aria-hidden="true"></span> Home</a></li>
-					<li <?= $title == "Hello" ? "class=\"active\"" : "" ?>><a
-						href="/hello"><span class="glyphicon glyphicon-music"
-							aria-hidden="true"></span> Hello</a></li>
-					<li><a href="/form"><span class="glyphicon glyphicon-user"
-							aria-hidden="true"></span> Form Handling</a></li>
-					<li><a href="/blogpost"><span class="glyphicon glyphicon-cog"
-							aria-hidden="true"></span>Blog Post</a></li>
+					<li <?= $title == "Post" ? "class=\"active\"" : "" ?>><a href="/form"><span class="glyphicon glyphicon-hand-right"
+							aria-hidden="true"></span>Post</a></li>
+					<li <?= $title == "Blog" ? "class=\"active\"" : "" ?>><a href="/blogpost"><span class="glyphicon glyphicon-eye-open"
+							aria-hidden="true"></span>Blog</a></li>
+					<li <?= $title == "Login" ? "class=\"active\"" : "" ?>><a href="/login"><span class="glyphicon glyphicon-user"
+							aria-hidden="true"></span>Login</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<div class="container">
-	<?php
-$view["slots"]->output("_content");
-?>
-</div>
+        <?php
+        $view["slots"]->output("_content");
+        ?>
+    </div>
 </body>

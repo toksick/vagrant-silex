@@ -1,5 +1,5 @@
 <?php
 $view->extend("layout.html.php");
-$view["slots"]->set("title", "Form Handling");
+$view["slots"]->set("title", "Post");
 ?>
-<p>Datensatz angelegt!</p>
+<h2 class="text-success">Datensatz angelegt!</h2>
